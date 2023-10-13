@@ -1,38 +1,151 @@
-.App {
-  text-align: center;
+html{
+  scroll-behavior: smooth;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a{
+  text-decoration: none;
+  color: black;
+
+}
+/* navbar  */
+.navbar{
+  height: 20vh;
+  padding-left: 50px !important; 
+  padding-right: 50px !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* profile  */
+.profile{
+  height: 80vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+}
+.profile p{
+  color: rgb(85, 85, 85);
+  font-weight: 600;
+  text-align: center;
+ 
+}
+.profile p:last-of-type{
+  font-size: 30px;
+}
+.profile .intro-text{
+  margin-left: 48px;
+}
+/* about  */
+.myexperience ,.myeducation{
+  border: 2px solid rgb(85, 85, 85);
+  border-radius: 25px;
+  /* width: 50%; */
+  flex: 1;
 }
 
-.App-link {
-  color: #61dafb;
+/* experience component  */
+.basic-front>div>div{
+  border: 2px solid rgb(85, 85, 85);
+  border-radius: 25px;
+  height: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.project>div{
+  background: rgb(250, 250, 250);
+  border-radius: 20px;
+}
+
+/* back to top icon  */
+.to-top{
+  position: fixed;
+  bottom: 16px;
+  right: 20px;
+  cursor: pointer;
+}
+
+
+/* hovers  */
+.nav > *:hover ,.linked-in:hover , .email:hover ,.footer>*:hover{
+  color: grey !important;
+  border-bottom: 2px solid grey;
+  width: fit-content;
+  
   }
-  to {
-    transform: rotate(360deg);
+/* media  */
+@media (max-width:992px) {
+  .navbar {
+   padding-left: 0 !important;
+   padding-right: 0 !important;
+   margin: 0 !important;
   }
+  .profile{
+    display: block;
+  }
+  .intro-text{
+    margin: 0 !important;
+  }
+  .aboutme{
+    display: block !important;
+    margin-top: 0 !important;
+    padding-top: 10px !important;
+  }
+  .aboutparagraph{
+    max-width:inherit !important;
+  }
+.aboutimage{
+  margin-right: 0 !important;
+}
+.exp-edu{
+  margin-top: 15px !important;
+}
+
+.basics>* , .front>* {
+  width: 193px;
+}
+
+}
+@media(max-width:576px){
+  .exp-edu{
+    display: block !important;
+    
+  }
+  .myexperience{
+    margin: auto !important;
+    margin-top: 15px !important;
+  }
+  .myeducation{
+    margin: auto !important;
+    margin-top: 15px !important;
+  }
+  .basic-front>div{
+    padding: 0 !important;
+  }
+
+  .project{
+    padding: 0 !important;
+  }
+ 
+  .contactC{
+    padding-top: 48px !important;
+  }
+  .footer{
+    flex-direction: column;
+    margin-top: 50px !important;
+    width: 100% !important;
+  }
+}
+@media(min-width:992px){
+  .experience , .about , .projects ,.contact{
+     height: 100vh;
+  }
+ 
+}
+
+
+@media (min-width: 576px) and (max-width: 769px) {
+.git{
+  width: 42% !important;
+}
+.demo{
+  width: 53% !important;
+}
+
 }
